@@ -9,6 +9,8 @@ Stack * stack_create(void) {
 }
 
 void stack_destroy(Stack *s) {
+	if (s->arr)
+		free(s->arr);
 	free(s);
 }
 
